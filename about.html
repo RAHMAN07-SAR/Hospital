@@ -1,0 +1,973 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dr. Batul PT — Healing Hands | Physiotherapy Clinic</title>
+  <meta name="description" content="Dr. Batul PT — BPT. Specialist physiotherapy for ortho, neuro, postpartum, sports injury & post-surgical rehabilitation. Sessions 45–60 min. Book: 7569602951" />
+  <meta name="keywords" content="physiotherapy, rehabilitation, orthopedic physiotherapy, neurological physiotherapy, postpartum physiotherapy, sports injury, ultrasound, TENS, IFT" />
+  <meta name="author" content="Dr. Batul PT" />
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- CSS: Styling for full site. This includes responsive rules and helpful utilities. -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* ============================
+       ROOT VARIABLES
+       ============================ */
+    :root{
+      --brand:#b21b3a;        /* deep maroon brand color */
+      --accent:#ffd76a;       /* warm yellow */
+      --muted:#6f6f6f;
+      --bg:#faf9f8;
+      --card:#ffffff;
+      --radius:12px;
+      --container:1200px;
+      --gap:18px;
+      --text-dark:#222;
+      --max-width:1180px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    /* reset / base */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text-dark);-webkit-font-smoothing:antialiased;line-height:1.45}
+    img{max-width:100%;display:block;height:auto}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:92%;max-width:var(--container);margin:0 auto}
+    h1,h2,h3,h4,h5{margin:0 0 10px}
+    p{margin:0 0 12px;color:#333}
+
+    /* ============================
+       TOP BAR
+       ============================ */
+    .topbar{
+      background:#1f2324;color:#fff;font-size:13px;padding:8px 0;
+      border-bottom:1px solid rgba(255,255,255,0.03);
+    }
+    .topbar .container{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .topbar .left{display:flex;gap:12px;align-items:center}
+    .topbar .right{display:flex;gap:18px;align-items:center;font-weight:600}
+
+    /* ============================
+       HEADER
+       ============================ */
+    header.site-header{background:#fff;position:sticky;top:0;z-index:120;box-shadow:0 4px 20px rgba(10,10,10,0.03)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img.logo{height:64px;width:64px;border-radius:10px;object-fit:cover}
+    .brand .title{font-size:20px;font-weight:800;color:var(--brand);line-height:1}
+    .brand .subtitle{font-size:13px;color:var(--muted)}
+    .header-contacts{display:flex;gap:12px;align-items:center}
+    .chip{background:#fff;padding:10px 12px;border-radius:10px;border:1px solid #f0f0f0;display:flex;flex-direction:column;align-items:flex-start}
+    .chip small{color:var(--muted);font-size:12px}
+    .chip strong{font-size:15px}
+    .btn-book{background:var(--brand);color:#fff;padding:10px 16px;border-radius:40px;font-weight:700;box-shadow:0 8px 18px rgba(178,27,58,0.12)}
+
+    /* ============================
+       NAV
+       ============================ */
+    nav.main-nav{border-top:4px solid var(--accent);background:#fff}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
+    .nav-links{display:flex;gap:20px;align-items:center}
+    .nav-links a{padding:8px 6px;color:var(--muted);font-weight:600}
+    .nav-links a.active{color:var(--brand)}
+    .nav-right{display:flex;gap:14px;align-items:center}
+    .social-dot{width:40px;height:40px;border-radius:50%;background:#fbf7f6;display:flex;align-items:center;justify-content:center}
+    .hamburger{display:none;font-size:22px;cursor:pointer}
+
+    /* ============================================================
+       Hero / Banner (Large)
+       ============================================================ */
+
+    .hero{
+      min-height:560px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+      position:relative;
+      overflow:hidden;
+    }
+
+    /* large banner image set in HTML inline style for transparency */
+    .hero::after{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg,rgba(0,0,0,0.48),rgba(0,0,0,0.16));
+      z-index:1;
+    }
+
+    .hero-inner{position:relative;z-index:2;max-width:980px;padding:40px 20px}
+    .kicker{display:inline-block;background:var(--accent);color:#111;padding:8px 14px;border-radius:8px;font-weight:800;margin-bottom:14px}
+    .hero h1{font-size:54px;line-height:0.94;margin-bottom:12px;font-weight:900;letter-spacing:-1px;opacity:0;transform:translateY(28px);transition:all .9s cubic-bezier(.2,.9,.2,1)}
+    .hero p.lead{font-size:18px;margin-bottom:18px;color:rgba(255,255,255,0.95);opacity:0;transform:translateY(20px);transition:all .9s cubic-bezier(.2,.9,.2,1)}
+    .hero .hero-ctas{display:flex;gap:12px;justify-content:center;opacity:0;transform:translateY(18px);transition:all .9s cubic-bezier(.2,.9,.2,1)}
+
+    .hero.show h1,.hero.show p.lead,.hero.show .hero-ctas{opacity:1;transform:none}
+
+    /* small decorative scroll indicator */
+    .scroll-indicator{position:absolute;right:28px;bottom:28px;background:var(--brand);color:#fff;width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;z-index:3;box-shadow:0 12px 30px rgba(0,0,0,0.2)}
+
+    /* ============================================================
+       Quick service cards overlapping hero
+       ============================================================ */
+
+    .quick-services{
+      max-width:1200px;margin:-60px auto 18px;padding:10px;position:relative;z-index:40;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+    }
+
+    .service-card{
+      background:var(--card);padding:20px;border-radius:12px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 12px 34px rgba(8,8,8,0.06);transform:translateY(18px);opacity:0;transition:all .8s cubic-bezier(.25,.8,.25,1)
+    }
+    .service-card .icon{width:68px;height:68px;border-radius:10px;background:linear-gradient(180deg,var(--glass),#fff);display:flex;align-items:center;justify-content:center;font-size:28px}
+    .service-card h4{margin:0 0 6px}
+    .service-card p{color:var(--muted);margin:0}
+
+    .service-card.revealed{transform:none;opacity:1}
+
+    /* ============================================================
+       Main About section with image + text split
+       ============================================================ */
+
+    .about-section{padding:48px 0}
+    .about-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:start}
+    .about-main{background:transparent}
+    .about-main h2{font-size:32px;color:var(--brand);margin-bottom:8px;opacity:0;transform:translateX(-30px);transition:all .7s ease}
+    .about-main p{color:var(--muted);opacity:0;transform:translateY(18px);transition:all .7s ease}
+    .about-main ul{margin-top:14px;opacity:0;transform:translateY(14px);transition:all .7s ease}
+    .about-main ul li{position:relative;padding-left:22px;margin-bottom:10px}
+    .about-main ul li::before{content:'✔';position:absolute;left:0;color:var(--brand);font-weight:700}
+
+    .about-side{
+      background:var(--card);
+      padding:18px;border-radius:12px;border:1px solid #f4f4f4;box-shadow:0 8px 28px rgba(0,0,0,0.04)
+    }
+    .about-side h4{margin-bottom:10px}
+    .about-side p{color:var(--muted);margin-bottom:8px}
+
+    .reveal-on-scroll{opacity:0;transform:translateY(20px);transition:all .8s ease}
+
+    /* ============================================================
+       Stats counters section
+       ============================================================ */
+
+    .stats-section{padding:36px 0}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .stat{background:#fff;padding:26px;border-radius:12px;text-align:center;box-shadow:0 8px 30px rgba(0,0,0,0.05)}
+    .stat .num{font-size:32px;color:var(--brand);font-weight:800;display:block}
+    .stat .label{color:var(--muted);font-size:14px}
+
+    /* ============================================================
+       Team / Practitioner card
+       ============================================================ */
+
+    .team-section{padding:40px 0}
+    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .practitioner{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.06);text-align:center}
+    .practitioner img{width:160px;height:160px;border-radius:12px;object-fit:cover;margin:0 auto 12px}
+    .practitioner h5{margin-bottom:6px}
+    .practitioner p{color:var(--muted);font-size:14px}
+
+    /* ============================================================
+       Gallery / Case Study carousel-like layout
+       ============================================================ */
+
+    .gallery-section{padding:40px 0}
+    .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .gallery-item{position:relative;border-radius:10px;overflow:hidden}
+    .gallery-item img{height:220px;object-fit:cover}
+    .gallery-item .caption{position:absolute;left:12px;bottom:12px;background:rgba(0,0,0,0.6);color:#fff;padding:8px 10px;border-radius:8px;font-weight:700}
+
+    /* ============================================================
+       Testimonials
+       ============================================================ */
+
+    .testimonials{padding:40px 0;background:linear-gradient(180deg,#fff,#fafafa)}
+    .testimonials .wrap{display:flex;gap:18px;overflow:hidden;padding-bottom:8px}
+    .testimonial-card{background:#fff;padding:18px;border-radius:12px;min-width:320px;box-shadow:0 10px 30px rgba(0,0,0,0.06)}
+    .testimonial-card p{font-style:italic;color:#333}
+    .testimonial-card .who{margin-top:12px;font-weight:700;color:var(--brand)}
+
+    /* ============================================================
+       Pricing / Packages
+       ============================================================ */
+
+    .pricing{padding:32px 0}
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .plan{background:#fff;padding:18px;border-radius:12px;text-align:center;border:1px solid #f0f0f0;box-shadow:0 8px 24px rgba(0,0,0,0.04)}
+    .plan.popular{border:2px solid var(--brand);transform:translateY(-6px)}
+    .plan h4{margin-bottom:8px}
+    .plan .price{font-weight:800;font-size:20px;color:var(--brand);margin:10px 0}
+
+    /* ============================================================
+       Blog teasers
+       ============================================================ */
+
+    .blog-section{padding:36px 0}
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .post{background:#fff;padding:12px;border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,0.04)}
+    .post img{height:160px;object-fit:cover;border-radius:8px}
+
+    /* ============================================================
+       FAQ
+       ============================================================ */
+
+    .faq{padding:28px 0}
+    .faq .item{background:#fff;padding:12px;border-radius:10px;margin-bottom:10px;border:1px solid #f2f2f2}
+    .faq .q{display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+    .faq .a{display:none;padding-top:8px;color:var(--muted)}
+
+    /* ============================================================
+       Contact / Map
+       ============================================================ */
+
+    .contact{padding:36px 0}
+    .contact-grid{display:grid;grid-template-columns:1fr 420px;gap:20px;align-items:start}
+    form{background:#fff;padding:18px;border-radius:12px;border:1px solid #f4f4f4}
+    label{display:block;font-size:13px;margin-top:8px;color:#333}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #eee;margin-top:8px;font-size:15px}
+    .form-actions{margin-top:12px;display:flex;gap:10px}
+    .map{border-radius:12px;overflow:hidden;border:1px solid #eee}
+
+    /* ============================
+       FOOTER
+       ============================ */
+    footer.site-footer{background:#222;color:#fff;padding:28px 0;margin-top:30px}
+    .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .footer-grid a{color:#fff}
+    .small{font-size:13px;color:#cfcfcf}
+
+    /* ============================
+       RESPONSIVE
+       ============================ */
+    @media(max-width:1100px){
+      .hero h1{font-size:44px}
+      .quick-services{grid-template-columns:1fr}
+      .gallery-grid{grid-template-columns:repeat(2,1fr)}
+      .team-grid{grid-template-columns:repeat(2,1fr)}
+      .case-grid{grid-template-columns:1fr}
+      .pricing-grid{grid-template-columns:1fr}
+      .nav-links{display:none}
+      .hamburger{display:block}
+      .about-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:600px){
+      .hero h1{font-size:28px}
+      .hero p.lead{font-size:15px}
+      .brand .title{font-size:18px}
+      .brand img.logo{height:48px;width:48px}
+      .header-contacts{display:none}
+      .quick-services{margin:-36px 12px 18px}
+      .gallery-item img{height:160px}
+      .team-grid{grid-template-columns:1fr}
+      .post img{height:140px}
+    }
+
+    /* small utilities */
+    .text-center{text-align:center}
+    .muted{color:var(--muted)}
+    .mb-sm{margin-bottom:8px}
+    .mb-md{margin-bottom:16px}
+    .mt-md{margin-top:16px}
+  </style>
+</head>
+<body>
+
+  <!-- ============================
+       TOP BAR: contact + quick info
+       ============================ -->
+  <div class="topbar" role="region" aria-label="Clinic quick info">
+    <div class="container">
+      <div class="left">
+        <div class="muted">Welcome to the professional physiotherapy clinic of Dr. Batul PT</div>
+      </div>
+      <div class="right" aria-hidden="false">
+        <div style="display:flex;gap:12px;align-items:center">
+          <div class="muted"><i class="fa-solid fa-location-dot"></i> Tungabhadra colony venture, Sunkesla road</div>
+          <div style="width:1px;height:16px;background:rgba(255,255,255,0.12)"></div>
+          <div><i class="fa-solid fa-phone"></i> <strong>7569602951</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       HEADER: logo, brand, quick contacts
+       ============================ -->
+  <header class="site-header" role="banner" aria-label="Main header">
+    <div class="container header-inner" role="group" aria-label="Brand and contact">
+      <div class="brand" aria-hidden="false">
+        <!-- logo: local or external file; using unsplash-based image for demo -->
+        <img class="logo" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=200&q=80" alt="Dr Batul PT logo image">
+        <div>
+          <div class="title">Dr. Batul PT</div>
+          <div class="subtitle">BPT · Neuro · Ortho · Postpartum · Sports Rehabilitation</div>
+        </div>
+      </div>
+
+      <div class="header-contacts" aria-hidden="false">
+        <div class="chip" role="group" aria-label="Call">
+          <small>Call / WhatsApp</small>
+          <strong><a href="tel:7569602951" style="color:inherit">7569602951</a></strong>
+        </div>
+        <div class="chip" role="group" aria-label="Email">
+          <small>Email</small>
+          <strong><a href="mailto:drbatulkotawala@gmail.com" style="color:inherit">drbatulkotawala@gmail.com</a></strong>
+        </div>
+        <a class="btn-book" href="book.html" aria-label="Book appointment by phone">Book Appointment</a>
+      </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
+      <div class="container nav-inner">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="hamburger" id="hamburger" aria-controls="mobileMenu" aria-expanded="false">☰</div>
+          <div class="nav-links" id="mainNav" role="menubar">
+            <a class="active" href="index.html" role="menuitem">Home</a>
+            <a href="services.html" role="menuitem">Services</a>
+            <a href="about.html" role="menuitem">About</a>
+            <a href="blog.html" role="menuitem">Blog</a>
+            <a href="contact.html" role="menuitem">Contact</a>
+          </div>
+        </div>
+        <div class="nav-right">
+          <div class="social-dot" role="link" aria-label="Instagram">
+            <a href="https://www.instagram.com/dr.batulkotawala.pt?igsh=ZmVyenZsazV6amVr" target="_blank" rel="noopener noreferrer" style="color:inherit"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU: toggled via JS -->
+      <div id="mobileMenu" style="display:none;padding:12px;background:#fff;border-top:1px solid #eee">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+          <a href="services.html" onclick="toggleMobileMenu()">Services</a>
+          <a href="about.html" onclick="toggleMobileMenu()">About</a>
+          <a href="blog.html" onclick="toggleMobileMenu()">Blog</a>
+          <a href="contact.html" onclick="toggleMobileMenu()">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============================================================
+       HERO / BANNER
+       ============================================================ -->
+  <main>
+    <section class="hero" role="region" aria-label="Main hero"
+             style="background-image:url('https://tse2.mm.bing.net/th/id/OIP.XQ8hR4HLmoPCk-gzlkJq5QHaED?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3');background-size:cover;background-position:center;">
+      <div class="hero-inner">
+        <div class="kicker">About the Clinic</div>
+        <h1 id="heroTitle">We Restore Movement — We Restore Life</h1>
+        <p class="lead">Dr. Batul PT provides specialized physiotherapy across orthopedics, neurology, postpartum and sports rehabilitation — with modern combination therapy (ultrasound, IFT, TENS, Russian current).</p>
+        <div class="hero-ctas">
+          <a class="btn-primary" href="tel:7569602951">Book by Call</a>
+          <a class="btn-primary" href="https://wa.me/917569602951" style="background:#5a9f5a">Message on WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">↓</div>
+    </section>
+
+    <!-- ============================================================
+         QUICK SERVICES (overlapping hero)
+         ============================================================ -->
+    <section class="quick-services" aria-label="Quick services highlights">
+      <article class="service-card" id="svcCard1" aria-labelledby="svcTitle1">
+        <div class="icon" aria-hidden="true"><i class="fa-solid fa-stethoscope"></i></div>
+        <div>
+          <h4 id="svcTitle1">Orthopedic Care</h4>
+          <p>Post-surgical rehab, joint pain management, mobility restoration.</p>
+        </div>
+      </article>
+
+      <article class="service-card" id="svcCard2" aria-labelledby="svcTitle2">
+        <div class="icon" aria-hidden="true"><i class="fa-solid fa-brain"></i></div>
+        <div>
+          <h4 id="svcTitle2">Neuro Rehabilitation</h4>
+          <p>Objectives-based neuro recovery: balance, gait, and function.</p>
+        </div>
+      </article>
+
+      <article class="service-card" id="svcCard3" aria-labelledby="svcTitle3">
+        <div class="icon" aria-hidden="true"><i class="fa-solid fa-person-dress"></i></div>
+        <div>
+          <h4 id="svcTitle3">Women's Health</h4>
+          <p>Postpartum and pelvic health programs that are gentle and effective.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============================================================
+         ABOUT GRID: main content + side info
+         ============================================================ -->
+    <section class="about-section container" aria-label="About content">
+      <div class="about-grid">
+        <!-- Left: main content -->
+        <div class="about-main">
+          <h2 id="aboutTitle">Meet Dr. Batul Kotawala (BPT)</h2>
+          <p id="aboutLead">I am a qualified physiotherapist with a hands-on approach to patient care, currently completing an internship and practicing across orthopaedic, neurological, gynecological, and sports rehabilitation departments. I emphasize evidence-based practice, patient education and progressive functional recovery.</p>
+
+          <ul id="aboutList">
+            <li><strong>Qualification:</strong> BPT</li>
+            <li><strong>Experience:</strong> 3 years (multi-department)</li>
+            <li><strong>Specialties:</strong> Ortho, Neuro, Postpartum, Sports Injury</li>
+            <li><strong>Equipment:</strong> Ultrasound, IFT, TENS, Russian current</li>
+            <li><strong>Sessions:</strong> 45–60 minutes; flexible scheduling</li>
+          </ul>
+
+          <p style="margin-top:18px">My approach combines manual therapy, targeted exercise prescription, electrotherapy where indicated, and patient education — all tailored to your goals. I measure progress objectively and adjust plans to ensure meaningful recovery.</p>
+
+          <div style="margin-top:18px">
+            <a class="btn-primary" href="#contact">Request Appointment</a>
+            <a style="margin-left:12px;padding:10px 14px;border-radius:10px;background:#fff;border:1px solid #eee" href="#cases">View Case Studies</a>
+          </div>
+        </div>
+
+        <!-- Right: side box -->
+        <aside class="about-side" aria-label="Clinic details">
+          <h4>Clinic & Equipment</h4>
+          <p class="muted">A comfortable environment with modern therapeutic tools to support recovery.</p>
+          <ul class="muted" style="margin-top:12px">
+            <li>Therapeutic ultrasound machines</li>
+            <li>Interferential current therapy (IFT)</li>
+            <li>TENS units for pain control</li>
+            <li>Electrical muscle stimulation (Russian current)</li>
+            <li>Functional training area</li>
+          </ul>
+
+          <div style="margin-top:12px;font-weight:700">
+            <div>Address:</div>
+            <div class="muted">Tungabhadra colony venture, Sunkesla road near SS hospital</div>
+          </div>
+
+          <div style="margin-top:12px">
+            <strong>Contact</strong><br>
+            <a href="tel:7569602951">7569602951</a><br>
+            <a href="mailto:drbatulkotawala@gmail.com">drbatulkotawala@gmail.com</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         STATS / COUNTERS
+         ============================================================ -->
+    <section class="stats-section container" aria-label="Clinic statistics">
+      <div class="stats-grid" id="statsGrid">
+        <div class="stat">
+          <span class="num" data-target="3">0</span>
+          <span class="label">Years Experience</span>
+        </div>
+        <div class="stat">
+          <span class="num" data-target="500">0</span>
+          <span class="label">Patients Treated</span>
+        </div>
+        <div class="stat">
+          <span class="num" data-target="6">0</span>
+          <span class="label">Days a Week</span>
+        </div>
+        <div class="stat">
+          <span class="num" data-target="60">0</span>
+          <span class="label">Minutes per Session</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TEAM / PRACTITIONER
+         ============================================================ -->
+    <section class="team-section container" aria-label="Team">
+      <h2 class="text-center">Meet The Team</h2>
+      <p class="muted text-center mb-md">Small, focused clinical team to support patient care.</p>
+      <div class="team-grid">
+        <div class="practitioner">
+          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=600&q=80" alt="Dr Batul portrait">
+          <h5>Dr. Batul Kotawala</h5>
+          <p class="muted">BPT · Physiotherapist · Specialist in neuro & ortho rehab</p>
+        </div>
+
+        <div class="practitioner">
+          <img src="https://tse4.mm.bing.net/th/id/OIP.RIRsDW3K7pnnumcCvlrL9gHaEK?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Therapy assistant">
+          <h5>Therapy Assistant</h5>
+          <p class="muted">Assists during exercise sessions and maintains equipment safety.</p>
+        </div>
+
+        <div class="practitioner">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/035/378/168/small_2x/ai-generated-realistic-image-of-doctor-health-care-nurse-ui-icon-brightening-generative-ai-photo.jpeg" alt="Clinic coordinator">
+          <h5>Clinic Coordinator</h5>
+          <p class="muted">Manages scheduling and patient follow-ups.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         GALLERY / CASES
+         ============================================================ -->
+    <section id="cases" class="gallery-section container" aria-label="Gallery and Case Studies">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h2>Gallery & Selected Cases</h2>
+        <div class="muted">Click to enlarge images</div>
+      </div>
+
+      <div class="gallery-grid mt-lg">
+        <figure class="gallery-item">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.wEpDmY6W_LPCwXeXSabTDwHaE8?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="therapy session">
+          <figcaption class="caption">Manual therapy session — post-op rehabilitation</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://tse1.mm.bing.net/th/id/OIP._VzlWsVevVFM35iTBFFZOQHaHa?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="equipment">
+          <figcaption class="caption">Clinical electrotherapy equipment</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://tse4.mm.bing.net/th/id/OIP.4HK1MxTqtDdU1jXV8YUavgHaGs?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="rehab area">
+          <figcaption class="caption">Functional training area</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://www.happiesthealth.com/wp-content/uploads/2023/01/Proprioception-The-balancing-act-for-fitness-Article-2-002.jpg" alt="balance">
+          <figcaption class="caption">Balance & proprioception</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://tse4.mm.bing.net/th/id/OIP.y7RdqMKbuDvN-Jt_sRqDBgHaE8?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="sports rehab">
+          <figcaption class="caption">Sports injury rehab</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img src="https://tse1.mm.bing.net/th/id/OIP.clR2PVk-R4cZKDIlyO2mPwHaD1?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="postpartum">
+          <figcaption class="caption">Postpartum & pelvic health</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TESTIMONIALS
+         ============================================================ -->
+    <section class="testimonials container" aria-label="Testimonials">
+      <h2 class="text-center">Patient Stories</h2>
+      <p class="muted text-center mb-md">Real experiences from people we helped recover</p>
+
+      <div class="wrap" id="testimonialWrap" style="scroll-behavior:smooth;">
+        <div class="testimonial-card">
+          <p>"I regained mobility after knee surgery thanks to the structured rehab plan and dedicated therapist. The combination therapy tools reduced pain quickly."</p>
+          <div class="who">— R. Sharma</div>
+        </div>
+
+        <div class="testimonial-card">
+          <p>"My balance improved significantly following neuro-rehab sessions. The exercises were practical and the follow-up was thorough."</p>
+          <div class="who">— M. Patel</div>
+        </div>
+
+        <div class="testimonial-card">
+          <p>"Postpartum care was extremely supportive — gentle progression and clear instructions for exercises at home."</p>
+          <div class="who">— S. Verma</div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:12px">
+        <button onclick="prevTest()" aria-label="Previous testimonial">◀</button>
+        <button onclick="nextTest()" aria-label="Next testimonial">▶</button>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRICING PACKAGES
+         ============================================================ -->
+    <section class="pricing container" aria-label="Pricing">
+      <h2 class="text-center">Sessions & Packages</h2>
+      <div class="pricing-grid mt-lg">
+        <div class="plan">
+          <h4>Single Session</h4>
+          <p class="muted">One-time assessment & treatment (45–60 minutes)</p>
+          <div class="price">₹500</div>
+          <a class="btn-primary" href="tel:7569602951">Book</a>
+        </div>
+
+        <div class="plan popular">
+          <h4>5-Session Pack <span class="muted">(Most Popular)</span></h4>
+          <p class="muted">Progressive treatment & reassessment</p>
+          <div class="price">₹2,200</div>
+          <a class="btn-primary" href="tel:7569602951">Book Pack</a>
+        </div>
+
+        <div class="plan">
+          <h4>10-Session Plan</h4>
+          <p class="muted">Best for intensive post-op or sports rehab</p>
+          <div class="price">₹4,000</div>
+          <a class="btn-primary" href="tel:7569602951">Book Plan</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         BLOG TEASERS
+         ============================================================ -->
+    <section class="blog-section container" aria-label="Blog">
+      <h2>From the Clinic — Articles & Tips</h2>
+      <div class="blog-grid mt-lg">
+        <article class="post">
+          <img src="https://tse2.mm.bing.net/th/id/OIP.F7FXKA1hJmGuJDJQBzBltgHaE8?cb=thfvnext&rs=1&pid=ImgDetMain&o=7&rm=3" alt="ACL recovery">
+          <div style="padding-top:8px">
+            <div class="meta muted">Mar 2025</div>
+            <h4>Recovering after ACL surgery</h4>
+            <p class="muted">A practical timeline and exercises for safe return to activity.</p>
+          </div>
+        </article>
+
+        <article class="post">
+          <img src="https://tse4.mm.bing.net/th/id/OIP.KzG9D-K_1o2UQSwBFeFPqAHaEJ?cb=thfvnext&w=964&h=540&rs=1&pid=ImgDetMain&o=7&rm=3" alt="postpartum">
+          <div style="padding-top:8px">
+            <div class="meta muted">Feb 2025</div>
+            <h4>Postpartum recovery: step-by-step</h4>
+            <p class="muted">Gentle, targeted treatments for new mothers.</p>
+          </div>
+        </article>
+
+        <article class="post">
+          <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=80" alt="back pain">
+          <div style="padding-top:8px">
+            <div class="meta muted">Jan 2025</div>
+            <h4>Managing chronic back pain</h4>
+            <p class="muted">Evidence-based strategies to reduce pain and restore function.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+         ============================================================ -->
+    <section class="faq container" aria-label="FAQ">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="item">
+        <div class="q" onclick="toggleFAQ(this)"><strong>How do I book an appointment?</strong><span>+</span></div>
+        <div class="a">Call or WhatsApp at <a href="tel:7569602951">7569602951</a> or use the booking form below. Walk-ins are accepted subject to availability.</div>
+      </div>
+
+      <div class="item">
+        <div class="q" onclick="toggleFAQ(this)"><strong>What should I bring to my first session?</strong><span>+</span></div>
+        <div class="a">Bring previous reports, list of medications, and wear comfortable clothes suitable for movement assessment.</div>
+      </div>
+
+      <div class="item">
+        <div class="q" onclick="toggleFAQ(this)"><strong>Are electrotherapy treatments safe?</strong><span>+</span></div>
+        <div class="a">Yes — modalities like TENS and IFT are applied by trained therapists following safety guidelines and contraindications are reviewed before use.</div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT FORM + MAP
+         ============================================================ -->
+    <section id="contact" class="contact container" aria-label="Contact">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:18px">
+        <h2>Contact & Bookings</h2>
+        <div class="muted">Call / WhatsApp: <strong><a href="tel:7569602951">7569602951</a></strong></div>
+      </div>
+
+      <div class="contact-grid mt-lg">
+        <div>
+          <form id="contactForm" onsubmit="submitForm(event)" aria-label="Contact form">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required value="Dr. Batul PT">
+
+            <label for="phone">Phone / WhatsApp</label>
+            <input id="phone" name="phone" type="tel" required value="7569602951">
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required value="drbatulkotawala@gmail.com">
+
+            <label for="when">Preferred date & time</label>
+            <input id="when" name="when" type="text" placeholder="e.g., Mon 5 PM">
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5">I would like to book an appointment.</textarea>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary">Send Request</button>
+              <a class="btn-primary" style="background:#5a9f5a" href="https://wa.me/917569602951" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </form>
+
+          <div style="margin-top:12px;font-size:13px" class="muted">
+            <strong>Working hours:</strong> Mon–Sat · Flexible slots · Sessions 45–60 min<br>
+            <strong>Address:</strong> Tungabhadra colony venture, Sunkesla road near SS hospital
+          </div>
+        </div>
+
+        <aside>
+          <div class="map">
+            <iframe width="100%" height="420" frameborder="0" style="border:0" loading="lazy"
+              src="https://www.google.com/maps?q=Tungabhadra+colony+venture+sunkesla+road+near+ss+hospital&output=embed"
+              aria-label="Clinic location map"></iframe>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <!-- ============================
+       FOOTER: multi-column with links & copyright
+       ============================ -->
+  <footer class="site-footer" role="contentinfo" aria-label="Footer">
+    <div class="container">
+      <div class="footer-grid" role="navigation" aria-label="Footer navigation">
+        <div>
+          <h4>Dr. Batul PT</h4>
+          <p class="small">Healing hands · Your hands for a brighter Tomorrow</p>
+          <p class="small">BPT · Neuro · Ortho · Postpartum · Sports Rehabilitation</p>
+          <p class="small">Address: Tungabhadra colony venture, Sunkesla road near SS hospital</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="small" style="list-style:none;padding-left:0">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Legal</h4>
+          <ul class="small" style="list-style:none;padding-left:0">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Connect</h4>
+          <p class="small">Email: <a href="mailto:drbatulkotawala@gmail.com">drbatulkotawala@gmail.com</a></p>
+          <p class="small">Phone: <a href="tel:7569602951">7569602951</a></p>
+          <p><a class="small" href="https://www.instagram.com/dr.batulkotawala.pt?igsh=ZmVyenZsazV6amVr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></a></p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:18px" class="small">© 2025 Dr. Batul PT · Domain: <strong>www.redescreation.in</strong> · All rights reserved</div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       JavaScript: animations, counters, interactivity
+       ============================================================ -->
+  <script>
+    // -----------------------------
+    // Helper: throttle for scroll
+    // -----------------------------
+    function throttle(fn, wait){
+      let time = Date.now();
+      return function(){
+        if ((time + wait - Date.now()) < 0) {
+          fn();
+          time = Date.now();
+        }
+      }
+    }
+
+    // -----------------------------
+    // Mobile menu toggle
+    // -----------------------------
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger && hamburger.addEventListener('click', function(){
+      const open = mobileMenu.style.display === 'block';
+      mobileMenu.style.display = open ? 'none' : 'block';
+      hamburger.setAttribute('aria-expanded', String(!open));
+    });
+
+    // -----------------------------
+    // Hero reveal animation
+    // -----------------------------
+    window.addEventListener('load', function(){
+      setTimeout(()=>{
+        document.querySelector('.hero').classList.add('show');
+      }, 260);
+    });
+
+    // -----------------------------
+    // Reveal on scroll (generic)
+    // -----------------------------
+    function revealOnScroll(){
+      const revealables = document.querySelectorAll('.service-card, .about-main h2, .about-main p, .about-main ul, .about-side, .stat, .practitioner, .gallery-item, .testimonial-card, .plan, .post, .faq .item, .contact .map, .cta');
+      const trigger = window.innerHeight * 0.85;
+      revealables.forEach(el=>{
+        const r = el.getBoundingClientRect();
+        if(r.top < trigger){
+          el.style.opacity = 1;
+          el.style.transform = 'none';
+        }
+      });
+
+      // service cards (special class)
+      const svc = document.querySelectorAll('.service-card');
+      svc.forEach((c, idx) => {
+        const r = c.getBoundingClientRect();
+        if (r.top < trigger) {
+          setTimeout(()=> c.classList.add('revealed'), idx * 120);
+        }
+      });
+
+      // hero inner already handled
+    }
+
+    window.addEventListener('scroll', throttle(revealOnScroll, 120));
+    window.addEventListener('load', revealOnScroll);
+
+    // -----------------------------
+    // Counters for stats
+    // -----------------------------
+    function runCounters(){
+      const counters = document.querySelectorAll('.num');
+      counters.forEach(counter => {
+        const update = () => {
+          const target = +counter.getAttribute('data-target');
+          const current = +counter.innerText;
+          const inc = Math.ceil(target / 60);
+          if(current < target){
+            counter.innerText = current + inc;
+            setTimeout(update, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        // only start if in view
+        const rect = counter.getBoundingClientRect();
+        if(rect.top < window.innerHeight && counter.innerText === '0'){
+          update();
+        }
+      });
+    }
+    window.addEventListener('scroll', throttle(runCounters, 250));
+    window.addEventListener('load', runCounters);
+
+    // -----------------------------
+    // Testimonials simple slider
+    // -----------------------------
+    let testIndex = 0;
+    const tests = Array.from(document.querySelectorAll('.testimonial-card'));
+    function showTest(i){
+      tests.forEach((t, idx) => {
+        t.style.display = (idx === i ? 'block' : 'none');
+      });
+    }
+    function nextTest(){
+      testIndex = (testIndex + 1) % tests.length;
+      showTest(testIndex);
+    }
+    function prevTest(){
+      testIndex = (testIndex - 1 + tests.length) % tests.length;
+      showTest(testIndex);
+    }
+    if(tests.length) showTest(0);
+
+    // Auto rotate testimonials every 6 seconds
+    setInterval(()=>{ nextTest(); }, 6000);
+
+    // expose prev/next to global (used by buttons)
+    window.nextTest = nextTest;
+    window.prevTest = prevTest;
+
+    // -----------------------------
+    // FAQ toggle
+    // -----------------------------
+    function toggleFAQ(el){
+      const a = el.nextElementSibling;
+      if(!a) return;
+      a.style.display = a.style.display === 'block' ? 'none' : 'block';
+    }
+    window.toggleFAQ = toggleFAQ;
+
+    // -----------------------------
+    // Simple gallery lightbox
+    // -----------------------------
+    document.querySelectorAll('.gallery-item img').forEach(img=>{
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', ()=>{
+        const overlay = document.createElement('div');
+        overlay.style.position = 'fixed';
+        overlay.style.inset = 0;
+        overlay.style.background = 'rgba(0,0,0,0.88)';
+        overlay.style.display = 'flex';
+        overlay.style.alignItems = 'center';
+        overlay.style.justifyContent = 'center';
+        overlay.style.zIndex = 9999;
+        overlay.addEventListener('click', ()=> document.body.removeChild(overlay));
+        const big = document.createElement('img');
+        big.src = img.src;
+        big.style.maxWidth = '94%';
+        big.style.maxHeight = '94%';
+        big.style.boxShadow = '0 30px 80px rgba(0,0,0,0.6)';
+        big.style.borderRadius = '8px';
+        overlay.appendChild(big);
+        document.body.appendChild(overlay);
+      });
+    });
+
+    // -----------------------------
+    // Contact form (mock)
+    // -----------------------------
+    function submitForm(e){
+      e.preventDefault();
+      const f = e.target;
+      const data = {
+        name: f.name.value,
+        phone: f.phone.value,
+        email: f.email.value,
+        when: f.when.value,
+        message: f.message.value
+      };
+      if(!data.name || !data.phone){
+        alert('Please enter your name and phone number.');
+        return;
+      }
+      // simulate sending
+      f.querySelector('button[type="submit"]').innerText = 'Sending...';
+      setTimeout(()=>{
+        alert('Thanks! Appointment request received. We will contact you on ' + data.phone);
+        f.reset();
+        f.querySelector('button[type="submit"]').innerText = 'Send Request';
+      }, 900);
+    }
+    window.submitForm = submitForm;
+
+    // -----------------------------
+    // Accessibility helpers
+    // -----------------------------
+    document.querySelectorAll('.service-card, .practitioner, .post').forEach(el=>{
+      el.tabIndex = 0;
+      el.addEventListener('keypress', (ev)=>{ if(ev.key === 'Enter'){ el.click(); }});
+    });
+
+    // Initial reveal for hero to kick-off other reveals
+    document.addEventListener('DOMContentLoaded', function(){
+      setTimeout(()=> {
+        // create a cascading reveal for elements to feel lively
+        const revealables = document.querySelectorAll('.service-card, .about-main h2, .about-main p, .about-main ul, .about-side, .stat, .practitioner, .gallery-item, .testimonial-card, .post, .plan');
+        revealables.forEach((el, idx) => {
+          setTimeout(()=> {
+            el.style.opacity = 1;
+            el.style.transform = 'none';
+            if(el.classList && el.classList.contains('service-card')) el.classList.add('revealed');
+          }, idx * 40);
+        });
+      }, 300);
+    });
+
+  </script>
+</body>
+</html>

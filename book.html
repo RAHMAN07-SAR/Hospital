@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dr. Batul PT — Healing Hands | Physiotherapy Clinic</title>
+  <meta name="description" content="Dr. Batul PT — BPT. Specialist physiotherapy for ortho, neuro, postpartum, sports injury & post-surgical rehabilitation. Sessions 45–60 min. Book: 7569602951" />
+  <meta name="keywords" content="physiotherapy, rehabilitation, orthopedic physiotherapy, neurological physiotherapy, postpartum physiotherapy, sports injury, ultrasound, TENS, IFT" />
+  <meta name="author" content="Dr. Batul PT" />
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- CSS: Styling for full site. This includes responsive rules and helpful utilities. -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* ============================
+       ROOT VARIABLES
+       ============================ */
+    :root{
+      --brand:#b21b3a;        /* deep maroon brand color */
+      --accent:#ffd76a;       /* warm yellow */
+      --muted:#6f6f6f;
+      --bg:#faf9f8;
+      --card:#ffffff;
+      --radius:12px;
+      --container:1200px;
+      --gap:18px;
+      --text-dark:#222;
+      --max-width:1180px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    /* reset / base */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text-dark);-webkit-font-smoothing:antialiased;line-height:1.45}
+    img{max-width:100%;display:block;height:auto}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:92%;max-width:var(--container);margin:0 auto}
+    h1,h2,h3,h4,h5{margin:0 0 10px}
+    p{margin:0 0 12px;color:#333}
+
+    /* ============================
+       TOP BAR
+       ============================ */
+    .topbar{
+      background:#1f2324;color:#fff;font-size:13px;padding:8px 0;
+      border-bottom:1px solid rgba(255,255,255,0.03);
+    }
+    .topbar .container{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .topbar .left{display:flex;gap:12px;align-items:center}
+    .topbar .right{display:flex;gap:18px;align-items:center;font-weight:600}
+
+    /* ============================
+       HEADER
+       ============================ */
+    header.site-header{background:#fff;position:sticky;top:0;z-index:120;box-shadow:0 4px 20px rgba(10,10,10,0.03)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img.logo{height:64px;width:64px;border-radius:10px;object-fit:cover}
+    .brand .title{font-size:20px;font-weight:800;color:var(--brand);line-height:1}
+    .brand .subtitle{font-size:13px;color:var(--muted)}
+    .header-contacts{display:flex;gap:12px;align-items:center}
+    .chip{background:#fff;padding:10px 12px;border-radius:10px;border:1px solid #f0f0f0;display:flex;flex-direction:column;align-items:flex-start}
+    .chip small{color:var(--muted);font-size:12px}
+    .chip strong{font-size:15px}
+    .btn-book{background:var(--brand);color:#fff;padding:10px 16px;border-radius:40px;font-weight:700;box-shadow:0 8px 18px rgba(178,27,58,0.12)}
+
+    /* ============================
+       NAV
+       ============================ */
+    nav.main-nav{border-top:4px solid var(--accent);background:#fff}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
+    .nav-links{display:flex;gap:20px;align-items:center}
+    .nav-links a{padding:8px 6px;color:var(--muted);font-weight:600}
+    .nav-links a.active{color:var(--brand)}
+    .nav-right{display:flex;gap:14px;align-items:center}
+    .social-dot{width:40px;height:40px;border-radius:50%;background:#fbf7f6;display:flex;align-items:center;justify-content:center}
+    .hamburger{display:none;font-size:22px;cursor:pointer}
+
+    /****************************************************
+    HERO SECTION
+    *****************************************************/
+    .hero{background:url('https://img.freepik.com/free-photo/modern-physiotherapy-room_23-2149133772.jpg') center/cover no-repeat;height:300px;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;position:relative;overflow:hidden;}
+    .hero h2{font-size:46px;background:rgba(0,0,0,0.5);padding:15px 30px;border-radius:10px;animation:fadeDown 1.5s ease;}
+    @keyframes fadeDown{from{opacity:0;transform:translateY(-50px);}to{opacity:1;transform:translateY(0);}}
+
+    /****************************************************
+    APPOINTMENT FORM WRAPPER
+    *****************************************************/
+    .appointment-container{width:90%;max-width:1100px;margin:60px auto;background:#fff;padding:40px;border-radius:15px;box-shadow:0 6px 25px rgba(0,0,0,0.08);}
+    .appointment-container h3{text-align:center;font-size:28px;color:#0a2e50;margin-bottom:30px;}
+
+    /****************************************************
+    PROGRESS BAR
+    *****************************************************/
+    .progressbar{display:flex;justify-content:space-between;margin-bottom:40px;counter-reset:step;}
+    .progressbar li{list-style:none;position:relative;text-align:center;width:100%;font-weight:600;color:#999;}
+    .progressbar li::before{counter-increment:step;content:counter(step);width:35px;height:35px;line-height:35px;border:2px solid #ccc;display:inline-block;border-radius:50%;background:#fff;margin-bottom:10px;transition:.3s;}
+    .progressbar li::after{content:"";position:absolute;width:100%;height:3px;background:#ccc;top:15px;left:-50%;z-index:-1;}
+    .progressbar li:first-child::after{content:none;}
+    .progressbar li.active{color:#0a2e50;}
+    .progressbar li.active::before{border-color:#0a2e50;background:#ffcc00;color:#0a2e50;font-weight:bold;}
+    .progressbar li.active+li::after{background:#0a2e50;}
+
+    /****************************************************
+    FORM SECTIONS
+    *****************************************************/
+    .form-step{display:none;animation:fadeEffect 1s ease;}
+    .form-step.active{display:block;}
+    @keyframes fadeEffect{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+    .form-group{margin-bottom:20px;}
+    label{display:block;margin-bottom:6px;font-weight:600;}
+    input,select,textarea{width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;font-size:15px;transition:.3s;}
+    input:focus,select:focus,textarea:focus{border-color:#0a2e50;outline:none;}
+    textarea{resize:none;min-height:100px;}
+
+    /****************************************************
+    BUTTONS
+    *****************************************************/
+    .btns{display:flex;justify-content:space-between;margin-top:20px;}
+    .btn{padding:12px 24px;border:none;border-radius:8px;cursor:pointer;font-weight:600;font-size:15px;transition:.3s;}
+    .btn-next{background:#0a2e50;color:#fff;}
+    .btn-prev{background:#ccc;color:#333;}
+    .btn-submit{background:#ffcc00;color:#0a2e50;width:100%;margin-top:20px;}
+    .btn:hover{opacity:0.9;}
+
+    /****************************************************
+    SUMMARY SECTION
+    *****************************************************/
+    .summary{background:#fafafa;border-radius:10px;padding:20px;margin-top:20px;border:1px solid #eee;}
+    .summary h4{margin-bottom:15px;color:#0a2e50;}
+    .summary p{margin-bottom:8px;font-size:15px;}
+
+   *******************************************
+    WHATSAPP BUTTON
+    *****************************************************/
+    .whatsapp-btn{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:14px 20px;border-radius:50%;font-size:22px;box-shadow:0 6px 15px rgba(0,0,0,0.2);cursor:pointer;transition:.3s;z-index:1000;}
+    .whatsapp-btn:hover{background:#20b857;}
+
+    /****************************************************
+    ANIMATIONS + SCROLL EFFECTS
+    *****************************************************/
+    .reveal{opacity:0;transform:translateY(60px);transition:all 1s ease;}
+    .reveal.active{opacity:1;transform:translateY(0);}
+
+    /****************************************************
+    RESPONSIVE DESIGN
+    *****************************************************/
+    @media(max-width:768px){
+      .progressbar li::after{top:18px;}
+      .btns{flex-direction:column;gap:15px;}
+      .btn{width:100%;}
+    }
+    /* ============================
+       FOOTER
+       ============================ */
+    footer.site-footer{background:#222;color:#fff;padding:28px 0;margin-top:30px}
+    .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .footer-grid a{color:#fff}
+    .small{font-size:13px;color:#cfcfcf}
+
+    /* ============================
+       RESPONSIVE
+       ============================ */
+    @media(max-width:1100px){
+      .hero h1{font-size:44px}
+      .quick-services{grid-template-columns:1fr}
+      .gallery-grid{grid-template-columns:repeat(2,1fr)}
+      .team-grid{grid-template-columns:repeat(2,1fr)}
+      .case-grid{grid-template-columns:1fr}
+      .pricing-grid{grid-template-columns:1fr}
+      .nav-links{display:none}
+      .hamburger{display:block}
+      .about-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:600px){
+      .hero h1{font-size:28px}
+      .hero p.lead{font-size:15px}
+      .brand .title{font-size:18px}
+      .brand img.logo{height:48px;width:48px}
+      .header-contacts{display:none}
+      .quick-services{margin:-36px 12px 18px}
+      .gallery-item img{height:160px}
+      .team-grid{grid-template-columns:1fr}
+      .post img{height:140px}
+    }
+
+    /* small utilities */
+    .text-center{text-align:center}
+    .muted{color:var(--muted)}
+    .mb-sm{margin-bottom:8px}
+    .mb-md{margin-bottom:16px}
+    .mt-md{margin-top:16px}
+  </style>
+</head>
+<body>
+
+  <!-- ============================
+       TOP BAR: contact + quick info
+       ============================ -->
+  <div class="topbar" role="region" aria-label="Clinic quick info">
+    <div class="container">
+      <div class="left">
+        <div class="muted">Welcome to the professional physiotherapy clinic of Dr. Batul PT</div>
+      </div>
+      <div class="right" aria-hidden="false">
+        <div style="display:flex;gap:12px;align-items:center">
+          <div class="muted"><i class="fa-solid fa-location-dot"></i> Tungabhadra colony venture, Sunkesla road</div>
+          <div style="width:1px;height:16px;background:rgba(255,255,255,0.12)"></div>
+          <div><i class="fa-solid fa-phone"></i> <strong>7569602951</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       HEADER: logo, brand, quick contacts
+       ============================ -->
+  <header class="site-header" role="banner" aria-label="Main header">
+    <div class="container header-inner" role="group" aria-label="Brand and contact">
+      <div class="brand" aria-hidden="false">
+        <!-- logo: local or external file; using unsplash-based image for demo -->
+        <img class="logo" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=200&q=80" alt="Dr Batul PT logo image">
+        <div>
+          <div class="title">Dr. Batul PT</div>
+          <div class="subtitle">BPT · Neuro · Ortho · Postpartum · Sports Rehabilitation</div>
+        </div>
+      </div>
+
+      <div class="header-contacts" aria-hidden="false">
+        <div class="chip" role="group" aria-label="Call">
+          <small>Call / WhatsApp</small>
+          <strong><a href="tel:7569602951" style="color:inherit">7569602951</a></strong>
+        </div>
+        <div class="chip" role="group" aria-label="Email">
+          <small>Email</small>
+          <strong><a href="mailto:drbatulkotawala@gmail.com" style="color:inherit">drbatulkotawala@gmail.com</a></strong>
+        </div>
+        <a class="btn-book" href="book.html" aria-label="Book appointment by phone">Book Appointment</a>
+      </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
+      <div class="container nav-inner">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="hamburger" id="hamburger" aria-controls="mobileMenu" aria-expanded="false">☰</div>
+          <div class="nav-links" id="mainNav" role="menubar">
+            <a class="active" href="index.html" role="menuitem">Home</a>
+            <a href="services.html" role="menuitem">Services</a>
+            <a href="about.html" role="menuitem">About</a>
+            <a href="blog.html" role="menuitem">Blog</a>
+            <a href="contact.html" role="menuitem">Contact</a>
+          </div>
+        </div>
+        <div class="nav-right">
+          <div class="social-dot" role="link" aria-label="Instagram">
+            <a href="https://www.instagram.com/dr.batulkotawala.pt?igsh=ZmVyenZsazV6amVr" target="_blank" rel="noopener noreferrer" style="color:inherit"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU: toggled via JS -->
+      <div id="mobileMenu" style="display:none;padding:12px;background:#fff;border-top:1px solid #eee">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+          <a href="services.html" onclick="toggleMobileMenu()">Services</a>
+          <a href="about.html" onclick="toggleMobileMenu()">About</a>
+          <a href="blog.html" onclick="toggleMobileMenu()">Blog</a>
+          <a href="contact.html" onclick="toggleMobileMenu()">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Book Appointment</h2>
+  </section>
+
+  <!-- APPOINTMENT FORM -->
+  <section class="appointment-container reveal">
+    <h3>Schedule Your Appointment</h3>
+    
+    <!-- PROGRESS BAR -->
+    <ul class="progressbar">
+      <li class="active">Personal Info</li>
+      <li>Service</li>
+      <li>Date & Time</li>
+      <li>Summary</li>
+    </ul>
+
+    <!-- FORM -->
+    <form id="appointmentForm">
+      <!-- STEP 1 -->
+      <div class="form-step active">
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" required placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required placeholder="Enter your email">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" required placeholder="Enter your phone number">
+        </div>
+        <div class="btns">
+          <button type="button" class="btn btn-next">Next</button>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="form-step">
+        <div class="form-group">
+          <label for="doctor">Preferred Doctor</label>
+          <select id="doctor" required>
+            <option value="">-- Select Doctor --</option>
+            <option value="Dr. Batul PT">Dr. Batul PT</option>
+            <option value="Senior Therapist">Senior Therapist</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="service">Service Required</label>
+          <select id="service" required>
+            <option value="">-- Select Service --</option>
+            <option value="Orthopedic Physiotherapy">Orthopedic Physiotherapy</option>
+            <option value="Neuro Physiotherapy">Neuro Physiotherapy</option>
+            <option value="Sports Injury Rehab">Sports Injury Rehab</option>
+            <option value="Post-Surgery Rehab">Post-Surgery Rehab</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="notes">Additional Notes</label>
+          <textarea id="notes" placeholder="Any additional information..."></textarea>
+        </div>
+        <div class="btns">
+          <button type="button" class="btn btn-prev">Previous</button>
+          <button type="button" class="btn btn-next">Next</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="form-step">
+        <div class="form-group">
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Preferred Time</label>
+          <input type="time" id="time" required>
+        </div>
+        <div class="btns">
+          <button type="button" class="btn btn-prev">Previous</button>
+          <button type="button" class="btn btn-next">Next</button>
+        </div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="form-step">
+        <div class="summary">
+          <h4>Appointment Summary</h4>
+          <p><strong>Name:</strong> <span id="sum-name"></span></p>
+          <p><strong>Email:</strong> <span id="sum-email"></span></p>
+          <p><strong>Phone:</strong> <span id="sum-phone"></span></p>
+          <p><strong>Doctor:</strong> <span id="sum-doctor"></span></p>
+          <p><strong>Service:</strong> <span id="sum-service"></span></p>
+          <p><strong>Date:</strong> <span id="sum-date"></span></p>
+          <p><strong>Time:</strong> <span id="sum-time"></span></p>
+          <p><strong>Notes:</strong> <span id="sum-notes"></span></p>
+        </div>
+        <button type="submit" class="btn btn-submit">Confirm Appointment</button>
+      </div>
+    </form>
+  </section>
+
+  
+  <!-- ============================
+       FOOTER: multi-column with links & copyright
+       ============================ -->
+  <footer class="site-footer" role="contentinfo" aria-label="Footer">
+    <div class="container">
+      <div class="footer-grid" role="navigation" aria-label="Footer navigation">
+        <div>
+          <h4>Dr. Batul PT</h4>
+          <p class="small">Healing hands · Your hands for a brighter Tomorrow</p>
+          <p class="small">BPT · Neuro · Ortho · Postpartum · Sports Rehabilitation</p>
+          <p class="small">Address: Tungabhadra colony venture, Sunkesla road near SS hospital</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="small" style="list-style:none;padding-left:0">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Legal</h4>
+          <ul class="small" style="list-style:none;padding-left:0">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Connect</h4>
+          <p class="small">Email: <a href="mailto:drbatulkotawala@gmail.com">drbatulkotawala@gmail.com</a></p>
+          <p class="small">Phone: <a href="tel:7569602951">7569602951</a></p>
+          <p><a class="small" href="https://www.instagram.com/dr.batulkotawala.pt?igsh=ZmVyenZsazV6amVr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></a></p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:18px" class="small">© 2025 Dr. Batul PT · Domain: <strong>www.redescreation.in</strong> · All rights reserved</div>
+    </div>
+  </footer>
+
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-btn">💬</a>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function toggleMobileMenu(){
+      if(!mobileMenu) return;
+      const isOpen = mobileMenu.style.display === 'block';
+      mobileMenu.style.display = isOpen ? 'none' : 'block';
+      hamburger && hamburger.setAttribute('aria-expanded', String(!isOpen));
+    }
+    hamburger && hamburger.addEventListener('click', toggleMobileMenu);
+
+    /****************************************************
+    MULTI-STEP FORM LOGIC
+    *****************************************************/
+    const form=document.getElementById("appointmentForm");
+    const formSteps=document.querySelectorAll(".form-step");
+    const progressSteps=document.querySelectorAll(".progressbar li");
+    let formStepIndex=0;
+
+    const updateFormSteps=()=> {
+      formSteps.forEach((step,index)=> {
+        step.classList.remove("active");
+        if(index===formStepIndex) {
+          step.classList.add("active");
+        }
+      });
+      progressSteps.forEach((step,index)=> {
+        step.classList.remove("active");
+        if(index<=formStepIndex) {
+          step.classList.add("active");
+        }
+      });
+    };
+
+    const nextBtns=document.querySelectorAll(".btn-next");
+    const prevBtns=document.querySelectorAll(".btn-prev");
+
+    nextBtns.forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        if(formStepIndex<formSteps.length-1){
+          formStepIndex++;
+          if(formStepIndex===3){
+            document.getElementById("sum-name").textContent=document.getElementById("fullname").value;
+            document.getElementById("sum-email").textContent=document.getElementById("email").value;
+            document.getElementById("sum-phone").textContent=document.getElementById("phone").value;
+            document.getElementById("sum-doctor").textContent=document.getElementById("doctor").value;
+            document.getElementById("sum-service").textContent=document.getElementById("service").value;
+            document.getElementById("sum-date").textContent=document.getElementById("date").value;
+            document.getElementById("sum-time").textContent=document.getElementById("time").value;
+            document.getElementById("sum-notes").textContent=document.getElementById("notes").value;
+          }
+          updateFormSteps();
+        }
+      });
+    });
+
+    prevBtns.forEach(btn=>{
+      btn.addEventListener("click",()=>{
+        if(formStepIndex>0){
+          formStepIndex--;
+          updateFormSteps();
+        }
+      });
+    });
+
+    form.addEventListener("submit",(e)=>{
+      e.preventDefault();
+      alert("✅ Appointment Confirmed! We will contact you shortly.");
+      form.reset();
+      formStepIndex=0;
+      updateFormSteps();
+    });
+
+    /****************************************************
+    SCROLL REVEAL EFFECT
+    *****************************************************/
+    const revealEls=document.querySelectorAll(".reveal");
+    const reveal=()=>{
+      revealEls.forEach(el=>{
+        const top=el.getBoundingClientRect().top;
+        if(top<window.innerHeight-50){
+          el.classList.add("active");
+        }
+      });
+    };
+    window.addEventListener("scroll",reveal);
+    window.addEventListener("load",reveal);
+  </script>
+</body>
+</html>

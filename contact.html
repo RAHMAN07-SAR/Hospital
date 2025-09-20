@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dr. Batul PT — Healing Hands | Physiotherapy Clinic</title>
+  <meta name="description" content="Dr. Batul PT — BPT. Specialist physiotherapy for ortho, neuro, postpartum, sports injury & post-surgical rehabilitation. Sessions 45–60 min. Book: 7569602951" />
+  <meta name="keywords" content="physiotherapy, rehabilitation, orthopedic physiotherapy, neurological physiotherapy, postpartum physiotherapy, sports injury, ultrasound, TENS, IFT" />
+  <meta name="author" content="Dr. Batul PT" />
+  <!-- Google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <!-- CSS: Styling for full site. This includes responsive rules and helpful utilities. -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    /* ============================
+       ROOT VARIABLES
+       ============================ */
+    :root{
+      --brand:#b21b3a;        /* deep maroon brand color */
+      --accent:#ffd76a;       /* warm yellow */
+      --muted:#6f6f6f;
+      --bg:#faf9f8;
+      --card:#ffffff;
+      --radius:12px;
+      --container:1200px;
+      --gap:18px;
+      --text-dark:#222;
+      --max-width:1180px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+
+    /* reset / base */
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--text-dark);-webkit-font-smoothing:antialiased;line-height:1.45}
+    img{max-width:100%;display:block;height:auto}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:92%;max-width:var(--container);margin:0 auto}
+    h1,h2,h3,h4,h5{margin:0 0 10px}
+    p{margin:0 0 12px;color:#333}
+
+    /* ============================
+       TOP BAR
+       ============================ */
+    .topbar{
+      background:#1f2324;color:#fff;font-size:13px;padding:8px 0;
+      border-bottom:1px solid rgba(255,255,255,0.03);
+    }
+    .topbar .container{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .topbar .left{display:flex;gap:12px;align-items:center}
+    .topbar .right{display:flex;gap:18px;align-items:center;font-weight:600}
+
+    /* ============================
+       HEADER
+       ============================ */
+    header.site-header{background:#fff;position:sticky;top:0;z-index:120;box-shadow:0 4px 20px rgba(10,10,10,0.03)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand img.logo{height:64px;width:64px;border-radius:10px;object-fit:cover}
+    .brand .title{font-size:20px;font-weight:800;color:var(--brand);line-height:1}
+    .brand .subtitle{font-size:13px;color:var(--muted)}
+    .header-contacts{display:flex;gap:12px;align-items:center}
+    .chip{background:#fff;padding:10px 12px;border-radius:10px;border:1px solid #f0f0f0;display:flex;flex-direction:column;align-items:flex-start}
+    .chip small{color:var(--muted);font-size:12px}
+    .chip strong{font-size:15px}
+    .btn-book{background:var(--brand);color:#fff;padding:10px 16px;border-radius:40px;font-weight:700;box-shadow:0 8px 18px rgba(178,27,58,0.12)}
+
+    /* ============================
+       NAV
+       ============================ */
+    nav.main-nav{border-top:4px solid var(--accent);background:#fff}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:12px}
+    .nav-links{display:flex;gap:20px;align-items:center}
+    .nav-links a{padding:8px 6px;color:var(--muted);font-weight:600}
+    .nav-links a.active{color:var(--brand)}
+    .nav-right{display:flex;gap:14px;align-items:center}
+    .social-dot{width:40px;height:40px;border-radius:50%;background:#fbf7f6;display:flex;align-items:center;justify-content:center}
+    .hamburger{display:none;font-size:22px;cursor:pointer}
+
+    /* HERO */
+    .hero{background:url('https://img.freepik.com/free-photo/rehabilitation-clinic-modern-design_23-2149133564.jpg') center/cover no-repeat;height:300px;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center;position:relative;overflow:hidden;}
+    .hero h2{font-size:46px;background:rgba(0,0,0,0.5);padding:15px 30px;border-radius:10px;animation:fadeDown 1.5s ease;}
+    @keyframes fadeDown{from{opacity:0;transform:translateY(-50px);}to{opacity:1;transform:translateY(0);}}
+
+    /* CONTACT SECTION */
+    .contact-container{display:grid;grid-template-columns:2fr 1fr;gap:40px;padding:60px 5%;}
+    form{background:#fff;padding:30px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.08);}
+    form h3{margin-bottom:20px;color:#0a2e50;font-size:22px;}
+    .form-group{margin-bottom:18px;}
+    label{display:block;margin-bottom:8px;font-weight:600;}
+    input,textarea{width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;font-size:15px;transition:.3s;}
+    input:focus,textarea:focus{border-color:#0a2e50;outline:none;}
+    textarea{resize:none;min-height:120px;}
+    button{background:#0a2e50;color:#fff;border:none;padding:12px 24px;border-radius:8px;font-size:16px;cursor:pointer;transition:.3s;}
+    button:hover{background:#ffcc00;color:#0a2e50;}
+
+    /* CONTACT INFO */
+    .contact-info{background:#fff;padding:30px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.08);height:fit-content;}
+    .contact-info h3{margin-bottom:20px;color:#0a2e50;font-size:22px;}
+    .info-item{margin-bottom:15px;}
+    .info-item strong{display:block;margin-bottom:5px;color:#333;}
+    .info-item p{color:#555;}
+
+    /* MAP */
+    .map{margin:40px 5%;border-radius:12px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,0.08);}
+
+    /* ============================
+       FOOTER
+       ============================ */
+    footer.site-footer{background:#222;color:#fff;padding:28px 0;margin-top:30px}
+    .footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .footer-grid a{color:#fff}
+    .small{font-size:13px;color:#cfcfcf}
+
+    /* ============================
+       RESPONSIVE
+       ============================ */
+    @media(max-width:1100px){
+      .hero h1{font-size:44px}
+      .quick-services{grid-template-columns:1fr}
+      .gallery-grid{grid-template-columns:repeat(2,1fr)}
+      .team-grid{grid-template-columns:repeat(2,1fr)}
+      .case-grid{grid-template-columns:1fr}
+      .pricing-grid{grid-template-columns:1fr}
+      .nav-links{display:none}
+      .hamburger{display:block}
+      .about-grid{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:600px){
+      .hero h1{font-size:28px}
+      .hero p.lead{font-size:15px}
+      .brand .title{font-size:18px}
+      .brand img.logo{height:48px;width:48px}
+      .header-contacts{display:none}
+      .quick-services{margin:-36px 12px 18px}
+      .gallery-item img{height:160px}
+      .team-grid{grid-template-columns:1fr}
+      .post img{height:140px}
+    }
+
+    /* small utilities */
+    .text-center{text-align:center}
+    .muted{color:var(--muted)}
+    .mb-sm{margin-bottom:8px}
+    .mb-md{margin-bottom:16px}
+    .mt-md{margin-top:16px}
+  </style>
+</head>
+<body>
+
+  <!-- ============================
+       TOP BAR: contact + quick info
+       ============================ -->
+  <div class="topbar" role="region" aria-label="Clinic quick info">
+    <div class="container">
+      <div class="left">
+        <div class="muted">Welcome to the professional physiotherapy clinic of Dr. Batul PT</div>
+      </div>
+      <div class="right" aria-hidden="false">
+        <div style="display:flex;gap:12px;align-items:center">
+          <div class="muted"><i class="fa-solid fa-location-dot"></i> Tungabhadra colony venture, Sunkesla road</div>
+          <div style="width:1px;height:16px;background:rgba(255,255,255,0.12)"></div>
+          <div><i class="fa-solid fa-phone"></i> <strong>7569602951</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================
+       HEADER: logo, brand, quick contacts
+       ============================ -->
+  <header class="site-header" role="banner" aria-label="Main header">
+    <div class="container header-inner" role="group" aria-label="Brand and contact">
+      <div class="brand" aria-hidden="false">
+        <!-- logo: local or external file; using unsplash-based image for demo -->
+        <img class="logo" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=200&q=80" alt="Dr Batul PT logo image">
+        <div>
+          <div class="title">Dr. Batul PT</div>
+          <div class="subtitle">BPT · Neuro · Ortho · Postpartum · Sports Rehabilitation</div>
+        </div>
+      </div>
+
+      <div class="header-contacts" aria-hidden="false">
+        <div class="chip" role="group" aria-label="Call">
+          <small>Call / WhatsApp</small>
+          <strong><a href="tel:7569602951" style="color:inherit">7569602951</a></strong>
+        </div>
+        <div class="chip" role="group" aria-label="Email">
+          <small>Email</small>
+          <strong><a href="mailto:drbatulkotawala@gmail.com" style="color:inherit">drbatulkotawala@gmail.com</a></strong>
+        </div>
+        <a class="btn-book" href="book.html" aria-label="Book appointment by phone">Book Appointment</a>
+      </div>
+    </div>
+
+    <!-- NAV -->
+    <nav class="main-nav" role="navigation" aria-label="Primary Navigation">
+      <div class="container nav-inner">
+        <div style="display:flex;align-items:center;gap:12px">
+          <div class="hamburger" id="hamburger" aria-controls="mobileMenu" aria-expanded="false">☰</div>
+          <div class="nav-links" id="mainNav" role="menubar">
+            <a class="active" href="index.html" role="menuitem">Home</a>
+            <a href="services.html" role="menuitem">Services</a>
+            <a href="about.html" role="menuitem">About</a>
+            <a href="blog.html" role="menuitem">Blog</a>
+            <a href="contact.html" role="menuitem">Contact</a>
+          </div>
+        </div>
+        <div class="nav-right">
+          <div class="social-dot" role="link" aria-label="Instagram">
+            <a href="https://www.instagram.com/dr.batulkotawala.pt?igsh=ZmVyenZsazV6amVr" target="_blank" rel="noopener noreferrer" style="color:inherit"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MOBILE MENU: toggled via JS -->
+      <div id="mobileMenu" style="display:none;padding:12px;background:#fff;border-top:1px solid #eee">
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="index.html" onclick="toggleMobileMenu()">Home</a>
+          <a href="services.html" onclick="toggleMobileMenu()">Services</a>
+          <a href="about.html" onclick="toggleMobileMenu()">About</a>
+          <a href="blog.html" onclick="toggleMobileMenu()">Blog</a>
+          <a href="contact.html" onclick="toggleMobileMenu()">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Contact Us</h2>
+  </section>
+
+  <!-- CONTACT FORM + INFO -->
+  <section class="contact-container">
+    <!-- FORM -->
+    <form id="contactForm">
+      <h3>Get in Touch</h3>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Your Phone">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" placeholder="Write your message here..." required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- INFO -->
+    <div class="contact-info">
+      <h3>Clinic Information</h3>
+      <div class="info-item">
+        <strong>Address</strong>
+        <p>Healing Hands Physiotherapy Clinic, Hyderabad, India</p>
+      </div>
+      <div class="info-item">
+        <strong>Phone</strong>
+        <p>+91 9876543210</p>
+      </div>
+      <div class="info-item">
+        <strong>Email</strong>
+        <p>drbatulpt@example.com</p>
+      </div>
+      <div class="info-item">
+        <strong>Working Hours</strong>
+        <p>Mon - Sat: 9 AM - 7 PM</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.7085132578376!2d78.48667187515254!3d17.385044483468173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99d42f7f9c4b%3A0x94c57a6dc0b1819!2sHyderabad!5e0!3m2!1sen!2sin!4v1691570958888!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  
+  <!-- ============================
+       FOOTER: multi-column with links & copyright
+       ============================ -->
+  <footer class="site-footer" role="contentinfo" aria-label="Footer">
+    <div class="container">
+      <div class="footer-grid" role="navigation" aria-label="Footer navigation">
+        <div>
+          <h4>Dr. Batul PT</h4>
+          <p class="small">Healing hands · Your hands for a brighter Tomorrow</p>
+          <p class="small">BPT · Neuro · Ortho · Postpartum · Sports Rehabilitation</p>
+          <p class="small">Address: Tungabhadra colony venture, Sunkesla road near SS hospital</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="small" style="list-style:none;padding-left:0">
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Legal</h4>
+          <ul class="small" style="list-style:none;padding-left:0">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Connect</h4>
+          <p class="small">Email: <a href="mailto:drbatulkotawala@gmail.com">drbatulkotawala@gmail.com</a></p>
+          <p class="small">Phone: <a href="tel:7569602951">7569602951</a></p>
+          <p><a class="small" href="https://www.instagram.com/dr.batulkotawala.pt?igsh=ZmVyenZsazV6amVr" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></a></p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:18px" class="small">© 2025 Dr. Batul PT · Domain: <strong>www.redescreation.in</strong> · All rights reserved</div>
+    </div>
+  </footer>
+
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-btn">💬</a>
+
+  <!-- JS -->
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function toggleMobileMenu(){
+      if(!mobileMenu) return;
+      const isOpen = mobileMenu.style.display === 'block';
+      mobileMenu.style.display = isOpen ? 'none' : 'block';
+      hamburger && hamburger.setAttribute('aria-expanded', String(!isOpen));
+    }
+    hamburger && hamburger.addEventListener('click', toggleMobileMenu);
+
+    // FORM VALIDATION + ALERT
+    document.getElementById("contactForm").addEventListener("submit", function(e){
+      e.preventDefault();
+      const name=document.getElementById("name").value.trim();
+      const email=document.getElementById("email").value.trim();
+      const message=document.getElementById("message").value.trim();
+      if(name===""||email===""||message===""){
+        alert("Please fill all required fields.");
+      } else {
+        alert("Thank you, "+name+"! Your message has been sent.");
+        this.reset();
+      }
+    });
+
+    // SCROLL ANIMATION
+    const elements=document.querySelectorAll(".contact-container, .map, form, .contact-info");
+    const reveal=()=>{elements.forEach(el=>{if(el.getBoundingClientRect().top<window.innerHeight-50){el.style.opacity="1";el.style.transform="translateY(0)";}});}
+    elements.forEach(el=>{el.style.opacity="0";el.style.transform="translateY(60px)";el.style.transition="all 1s ease";});
+    window.addEventListener("scroll",reveal);
+    window.addEventListener("load",reveal);
+  </script>
+
+</body>
+</html>
